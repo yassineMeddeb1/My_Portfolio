@@ -1,0 +1,46 @@
+/* Navbar glass effect */
+.glass-nav {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding: 12px 0;
+}
+
+/* Logo Yassine. */
+.brand-gradient {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #00eaff, #00ff87, #eaff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Links */
+.nav-link-custom {
+  color: #fff !important;
+  margin-left: 18px;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.nav-link-custom:hover {
+  color: #00eaff !important;
+  transform: translateY(-3px);
+}
+
+/* Mini neon button */
+.neon-btn-small {
+  margin-left: 15px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  border: 2px solid #00eaff;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 0 12px #00eaff;
+}
+
+.neon-btn-small:hover {
+  box-shadow: 0 0 25px #00eaff;
+  transform: translateY(-3px);
+}

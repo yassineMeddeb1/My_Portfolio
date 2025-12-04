@@ -1,0 +1,14 @@
+/* Cursor tracker */
+.cursor-tracker {
+  position: fixed;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 217, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.8),
+              0 0 25px rgba(0, 217, 255, 0.5);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: 0.06s linear;
+}
