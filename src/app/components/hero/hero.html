@@ -1,48 +1,24 @@
 <section class="about-section">
+  <div class="content-box animate neon-border">
 
-  <div class="about-container">
-
-    <!-- LEFT : Image -->
-    <div class="about-image">
-      <img src="assets/yass.jpg" alt="Yassine">
+    <div class="avatar-container neon-avatar">
+      <img src="/assets/yassino.jpg" alt="avatar" class="avatar-img" />
+      <div class="ring-glow"></div>
+      <div class="ring-rotate"></div>
     </div>
 
-    <!-- RIGHT : Content -->
-    <div class="about-content">
+    <h1 class="title">
+      Hello, I'm
+      <span class="gradient-text">{{ name }}</span>
+    </h1>
 
-      <h2 class="section-title">
-        À propos de moi
-      </h2>
+    <h3 class="profession">{{ profession }}</h3>
 
-      <p class="about-text">
-        Passionné par la technologie, je suis un développeur Full Stack
-        spécialisé dans la création d’applications web et mobiles
-        modernes, performantes et centrées sur l’utilisateur.
-        Mon objectif est de transformer des idées en solutions
-        digitales fluides, esthétiques et efficaces.
-      </p>
+    <p class="description">
+      {{ description }}
+    </p>
 
-      <div class="about-cards">
-
-        <div class="about-card">
-          <h3>🎯 Spécialités</h3>
-          <p>Angular, Spring Boot, Flutter, MySQL, Firebase</p>
-        </div>
-
-        <div class="about-card">
-          <h3>⚡ Soft skills</h3>
-          <p>Communication, résolution de problèmes, créativité</p>
-        </div>
-
-        <div class="about-card">
-          <h3>💡 Objectif</h3>
-          <p>Créer des expériences modernes, rapides et élégantes</p>
-        </div>
-
-      </div>
-
-    </div>
+    <a  class="btn neon-btn" [routerLink]="['/']" fragment="skills">Contactez-moi</a>
 
   </div>
-
 </section>

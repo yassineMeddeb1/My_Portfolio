@@ -1,20 +1,90 @@
-<section class="about-section">
-  <div class="content-box animate">
+<section #aboutSection class="about-section">
 
-    <div class="avatar-container">
-      <img src="/assets/yass.jpg" alt="avatar" class="avatar-img" />
-      <div class="avatar-glow"></div>
+  <div class="about-container">
+
+    <!-- HEADER -->
+    <div class="about-header">
+      <h2>About <span>Me</span></h2>
+      <p class="subtitle">
+        Full Stack Developer with a strong academic background in
+        Information Systems, Networks, and Telecommunications.
+      </p>
     </div>
 
-    <h1 class="title">Salut, je suis
-      <span class="gradient-text">{{name}}</span>
-    </h1>
+    <div class="about-content">
 
-    <h3 class="profession">{{profession}}</h3>
+      <!-- LEFT : PROFILE -->
+      <div class="about-profile glass-card">
+        <div class="avatar-wrapper">
+          <img src="assets/yassino.jpg" alt="Yassine Meddeb">
+          <span class="avatar-ring"></span>
+        </div>
 
-    <p class="description">{{description}}</p>
+        <h3>Yassine Meddeb</h3>
+        <p class="role">Full Stack Developer</p>
 
-    <a href="#contact" class="btn neon-btn">Contactez-moi</a>
+        <p class="profile-text">
+          Passionate about building scalable web and mobile applications
+          with a strong focus on clean architecture, performance, and user experience.
+        </p>
+      </div>
+
+      <!-- RIGHT : TIMELINE -->
+      <div class="about-timeline">
+
+        <div class="timeline-item glass-card">
+          <span class="timeline-dot"></span>
+          <h4>Baccalaureate in Computer Science</h4>
+          <span class="timeline-date">2022</span>
+          <p>
+            Solid foundations in algorithms, programming logic,
+            mathematics, and computer systems.
+          </p>
+        </div>
+
+        <div class="timeline-item glass-card">
+          <span class="timeline-dot"></span>
+          <h4>License in Information Systems Development</h4>
+          <span class="timeline-date">ISET Nabeul — 3 Years</span>
+          <p>
+            Focused on software engineering, full stack development,
+            databases, and enterprise application design.
+          </p>
+        </div>
+
+        <div class="timeline-item glass-card">
+          <span class="timeline-dot"></span>
+          <h4>Master’s Degree in Networks & Telecommunications</h4>
+          <span class="timeline-date">ENET’COM Sfax — 2 Years</span>
+          <p>
+            Advanced knowledge in networking, system communication,
+            infrastructure, and distributed technologies.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SKILLS HIGHLIGHT -->
+    <div class="about-focus glass-card">
+      <h3>Professional Focus</h3>
+      <p>
+        I combine software development skills with networking knowledge
+        to design robust, secure, and scalable solutions adapted to real-world needs.
+      </p>
+
+      <div class="focus-tags">
+        <span>Angular</span>
+        <span>Spring Boot</span>
+        <span>Flutter</span>
+        <span>REST APIs</span>
+        <span>Databases</span>
+        <span>Networks</span>
+        <span>Telecom</span>
+      </div>
+    </div>
 
   </div>
+
 </section>

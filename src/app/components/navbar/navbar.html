@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg glass-nav fixed-top">
   <div class="container">
-
-    <a class="navbar-brand brand-gradient" href="#">Yassine.</a>
+    <a class="navbar-brand brand-gradient" routerLink="">Yassine.</a>
 
     <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
@@ -9,11 +8,21 @@
 
     <div class="collapse navbar-collapse" id="menu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="#home">Accueil</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="#about">À propos</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="#skills">Compétences</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="#projects">Projets</a></li>
-        <li class="nav-item"><a class="btn neon-btn-small" href="#contact">Contact</a></li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" [routerLink]="['/']" fragment="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" [routerLink]="['/']" fragment="about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" [routerLink]="['/']" fragment="skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-custom" [routerLink]="['/']" fragment="projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn neon-btn-small" [routerLink]="['/']" fragment="contact">Contact</a>
+        </li>
       </ul>
     </div>
   </div>

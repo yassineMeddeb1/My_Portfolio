@@ -1,0 +1,33 @@
+<div class="modal-backdrop" (click)="close.emit()">
+  <div class="modal-box" (click)="$event.stopPropagation()">
+    
+    <span class="close-btn" (click)="close.emit()">×</span>
+
+    <div class="modal-content">
+
+      <!-- CAROUSEL -->
+      <div class="carousel">
+        <button class="nav left" (click)="prev()">‹</button>
+        <img [src]="project.images[currentIndex]" />
+        <button class="nav right" (click)="next()">›</button>
+      </div>
+
+      <!-- PROJECT DETAILS -->
+      <div class="project-details">
+        <h2>{{ project.name }}</h2>
+        <p>{{ project.fullDesc }}</p>
+
+        <div class="tech">
+          <span *ngFor="let t of project.tech">{{ t }}</span>
+        </div>
+
+        <div class="actions">
+          <a *ngIf="project.liveLink" [href]="project.liveLink" target="_blank">Live</a>
+          <a *ngIf="project.githubLink" [href]="project.githubLink" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

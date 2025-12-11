@@ -1,19 +1,15 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-
+import { RouterLink } from "@angular/router";
 @Component({
   selector: 'app-hero',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
 export class Hero {
-   @ViewChild('trail') trail!: ElementRef;
+   name = 'Yassine Meddeb';
+profession = 'Full Stack Developer';
+description = 
+  'Computer science student with a passion for web and mobile development. I enjoy building modern applications with smooth, intuitive, and elegant user experiences.';
 
-  onMouseMove(event: MouseEvent) {
-    const trailEl = this.trail.nativeElement;
-
-    trailEl.style.left = event.pageX + 'px';
-    trailEl.style.top = event.pageY + 'px';
-  
-}
 }

@@ -1,0 +1,61 @@
+<section class="contact-hero">
+
+  <div class="contact-header">
+    <h2>Get in Touch</h2>
+    <p>I am always open to discussions, collaborations, and new opportunities.</p>
+  </div>
+
+  <div class="contact-card">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+      <h3>Direct Information</h3>
+
+      <div class="info-line">
+        <i class="fas fa-envelope"></i> yassinmeddeb564@gmail.com
+      </div>
+
+      <div class="info-line">
+        <i class="fas fa-phone"></i> +216 21 103 925
+      </div>
+
+      <div class="info-line">
+        <i class="fas fa-map-marker-alt"></i> Tunis, Nabeul, Houaria
+      </div>
+
+      <div class="social-zone">
+        <a><i class="fab fa-linkedin"></i></a>
+        <a><i class="fab fa-github"></i></a>
+        <a><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <form
+      #formRef
+      #contactForm="ngForm"
+      class="contact-form"
+      (ngSubmit)="sendEmail(formRef)">
+
+      <div class="floating-group">
+        <input type="text" name="user_name" ngModel required />
+        <label>Your Name</label>
+      </div>
+
+      <div class="floating-group">
+        <input type="email" name="user_email" ngModel required />
+        <label>Email</label>
+      </div>
+
+      <div class="floating-group">
+        <textarea name="message" ngModel rows="4" required></textarea>
+        <label>Your Message</label>
+      </div>
+
+      <button class="send-btn" type="submit">
+        Send <i class="fas fa-paper-plane"></i>
+      </button>
+
+    </form>
+
+  </div>
+</section>

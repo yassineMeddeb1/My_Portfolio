@@ -1,0 +1,70 @@
+<section class="projects-section">
+
+  <h2 class="projects-title"> Projects</h2>
+
+  <!-- Filters -->
+  <div class="projects-filters">
+    <button
+      *ngFor="let cat of categories"
+      (click)="filterProjects(cat)"
+      [class.active]="cat === activeCategory">
+      {{ cat }}
+    </button>
+  </div>
+
+  <!-- Carousel -->
+  <div class="carousel-container">
+
+    <button class="carousel-arrow left" (click)="prev()">‹</button>
+
+    <div class="carousel">
+      <div class="carousel-track" [style.transform]="transform">
+
+        <div
+            *ngFor="let project of filteredProjects; let i = index"
+            class="project-card"
+            [class.active]="i === currentIndex"
+            (click)="openProject(project)"
+          >
+
+          <div class="project-image">
+            <img [src]="project.images[0]" 
+            />
+
+            <div class="overlay">
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.shortDesc }}</p>
+
+              <div class="tech-stack">
+                <span *ngFor="let tech of project.tech">{{ tech }}</span>
+              </div>
+            </div>
+
+            <a
+              *ngIf="project.githubLink"
+              [href]="project.githubLink"
+              target="_blank"
+              class="github-icon">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.39..."
+                />
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" (click)="next()">›</button>
+<app-project-modal
+  *ngIf="isModalOpen && selectedProject"
+  [project]="selectedProject"
+  (close)="closeModal()">
+</app-project-modal>
+  </div>
+  
+
+</section>
