@@ -10,7 +10,7 @@
 .brand-gradient {
   font-size: 1.8rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #00eaff, #00ff87, #eaff00);
+  background: linear-gradient(45deg, #00aebe, #00ff87, #eaff00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
