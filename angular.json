@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-angular": {
+    "yassine": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -16,6 +16,7 @@
       "architect": {
         "build": {
           "builder": "@angular/build:application",
+          "outputPath": "dist/yassine",
           "options": {
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +68,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfolio-angular:build:production"
+              "buildTarget": "yassine:build:production"
             },
             "development": {
-              "buildTarget": "portfolio-angular:build:development"
+              "buildTarget": "yassine:build:development"
             }
           },
           "defaultConfiguration": "development"
