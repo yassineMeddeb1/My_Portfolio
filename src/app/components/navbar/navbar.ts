@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrls: ['./navbar.css']
 })
-export class Navbar {
+export class Navbar implements OnInit {
+  
+  constructor() { }
 
+  ngOnInit(): void {
+    // Initialisation optionnelle si besoin
+  }
+
+  // Méthode pour fermer le menu sur mobile après clic
+  closeNavbar(): void {
+    const navbarCollapse = document.getElementById('menu');
+    if (navbarCollapse?.classList.contains('show')) {
+      // Utilisez Bootstrap pour fermer
+      const bsCollapse = new (window as any).bootstrap.Collapse(navbarCollapse);
+      bsCollapse.hide();
+    }
+  }
 }
